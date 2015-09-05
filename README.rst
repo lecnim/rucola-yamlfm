@@ -42,7 +42,7 @@ Next we load a yaml frontmatter from all ``.md`` files:
     # Frontmatter variables are available in the file:
 
     file = app.get('post.md')
-    flle['title']   # Hello badger
+    file['title']   # Hello badger
     file['content'] # Lorem ipsum dolor sit amet
 
 
