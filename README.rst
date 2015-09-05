@@ -21,7 +21,14 @@ Plugin requires ``pyyaml`` package.
 Usage
 -----
 
-Load yaml frontmatter from all ``.md`` files:
+We have an example file ``post.md`` with a frontmatter::
+
+    ---
+    title: Hello badger
+    ---
+    Lorem ipsum dolor sit amet
+
+Next we load a yaml frontmatter from all ``.md`` files:
 
 .. code-block:: python
 
@@ -29,16 +36,23 @@ Load yaml frontmatter from all ``.md`` files:
 
     app = Rucola('.')
     app.use(
-        YamlFrontmatter()
+        YamlFrontmatter()   # same as: YamlFrontmatter('**/*.md')
     )
 
-Load frontmatter from specified files:
+    # Frontmatter variables are available in the file:
+
+    file = app.get('post.md')
+    flle['title']   # Hello badger
+    file['content'] # Lorem ipsum dolor sit amet
+
+
+Load a frontmatter from all files that matches a pattern:
 
 .. code-block:: python
 
     app.use(
-        YamlFrontmatter('path/to/file')
-        YamlFrontmatter('path/to/dir/*.md')
+        YamlFrontmatter('path/to/file')     # only 'path/to/file'
+        YamlFrontmatter('path/to/dir/*.md') # all .md files in 'path/to/dir'
     )
 
 
