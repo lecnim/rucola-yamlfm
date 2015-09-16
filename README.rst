@@ -1,22 +1,24 @@
-=======================
+=============
 rucola-yamlfm
-=======================
+=============
 
-A Rucola plugin used to load YAML front matters from files.
+.. image:: https://travis-ci.org/lecnim/rucola-yamlfm.svg?branch=master
+    :target: https://travis-ci.org/lecnim/rucola-yamlfm
+
+A Rucola plugin used to load YAML front matters.
 
 Installation
 ------------
 
-Install with a ``pip`` command:
-
-::
+You can install using ``pip``: ::
 
     $ pip install rucola-yamlfm
 
 Dependencies
 ~~~~~~~~~~~~
 
-Plugin requires ``pyyaml`` package.
+The plugin requires a `pyyaml <https://pypi.python.org/pypi/PyYAML/>`_
+package. If you use ``pip``, it will automatically install it for you.
 
 Usage
 -----
@@ -60,7 +62,8 @@ Options
 ~~~~~~~
 
 pattern:
-    Try to load frontmatter from all files that matches a pattern. Default is ``**/*.md``
+    Try to load the frontmatter from all files that matches a pattern.
+    Default is ``**/*.md``
 
 limiter:
     Frontmatter limiter. Default is ``---``

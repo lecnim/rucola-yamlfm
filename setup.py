@@ -18,7 +18,7 @@ setup(
     version='0.0.1',
     license="MIT",
 
-    description="A Rucola plugin used to load YAML front matters from files.",
+    description="A Rucola plugin used to load YAML frontmatters.",
     long_description=read("README.rst"),
 
     author="Kasper Minciel",
